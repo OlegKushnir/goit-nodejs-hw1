@@ -1,7 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const contactsPath = "./db/contacts.json";
-const contacts = path.basename(contactsPath);
+const contactsPath = path.resolve('db','contacts.json');
 
 function listContacts() {
   fs.readFile(contactsPath, "utf8", (err, data) => {
